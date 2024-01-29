@@ -5,12 +5,10 @@ import SearchBar from '@/components/SearchBar.vue'
 
 <template>
   <header class="header">
-    <div
-      class="header__background"
-      :style="{ 'background-image': 'url(/public/images/pattern-bg-desktop.png)' }"
-    ></div>
-    <h1 class="header__title">IP Address Tracker</h1>
-    <SearchBar />
+    <div class="header__background">
+      <h1 class="header__title">IP Address Tracker</h1>
+      <SearchBar />
+    </div>
   </header>
 
   <main class="box__wrapper">
@@ -21,18 +19,26 @@ import SearchBar from '@/components/SearchBar.vue'
   </main>
 </template>
 
-<style scoped>
-.container {
-}
-
+<style scoped lang="scss">
 .header {
   width: 100%;
-}
-.header__background {
-  width: 100%;
-  height: 300px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+
+  &__background {
+    padding: 0 20px;
+    background-image: url(/public/images/pattern-bg-desktop.png);
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  &__title {
+    text-align: center;
+    color: white;
+    font-size: 44px;
+    line-height: 48px;
+    padding-top: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
 }
 </style>
