@@ -1,9 +1,9 @@
 <script setup lang="ts">
-
+import Homepage from './views/Homepage.vue'
 </script>
 
 <template>
-  <div class="">Daje roma</div>
+  <Homepage />
 </template>
 
 <style scoped></style>
